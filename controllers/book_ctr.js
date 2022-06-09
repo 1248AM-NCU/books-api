@@ -6,7 +6,7 @@ const book = require('../models/book.js')
 //Index
 router.get('/', async (_, res) => {
     const lib = await book.find({})
-    res.render('index', lib)
+    res.send(lib)
 })
 
 module.exports = router
