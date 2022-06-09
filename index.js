@@ -19,8 +19,12 @@ app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
-
+//Root Route
 app.get('/', (_,res) => {res.send("yay, we managed near nothing")})
+
+//Books Route
+const bookCtr = require("./controllers/book_ctr.js")
+app.use('/books', bookCtr)
 
 app.listen(PORT, ()=> {console.log('Listening on port:', PORT)})
 //djeaijdjiea
