@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser:true, useUnifiedTopolog
 
 //MIDDLEWARE
 app.use(methOver('_method'))
+app.use(express.json())//Dunno what this does, you just said to have it
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
 app.set('views', __dirname + '/views')
