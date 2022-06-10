@@ -53,7 +53,7 @@ router.get('/seed', (_, res) => {
 router.post('/', async (req,res) => {
     try {
         const created = await book.create(req.body)
-        res.status(201).send(created)
+        res.status(201).send(created.id)
     }
     catch(e) {res.status(400).send({}); console.log(e)}
 })
