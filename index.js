@@ -2,6 +2,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const methOver = require('method-override')
+const cors = require('cors')
 
 //CONFIGURATIONS
 require('dotenv').config()
